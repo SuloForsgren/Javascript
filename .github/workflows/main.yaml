@@ -1,0 +1,21 @@
+name: copy to shell.metropolia.fi
+
+on:
+  push:
+    branches: main
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: prepare SSH connection
+      run: |
+        mkdir ~/.ssh
+        chmod 700 ~/.ssh
+        echo "${{ secrets.ID_RSA }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+
+    - name: SCP to shell.metropolia.fi
+      run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r ./* sulof@shell.metropolia.fi:/home2-1/s/sulof/public_html/Javascript
