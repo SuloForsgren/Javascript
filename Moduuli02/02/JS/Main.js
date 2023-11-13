@@ -1,13 +1,12 @@
 'use strict'
 
-let n1 = prompt('First Number: ')
-let n2 = prompt('Second Number: ')
-let n3 = prompt('Third Number: ')
-let n4 = prompt('Fourth Number: ')
-let n5 = prompt('Fifth Number: ')
+const part = parseInt(prompt('Participants'), 10)
+let participants = []
 
-const array = [n1,n2,n3,n4,n5]
-
-for (let index = 4; index != -1; index--) {
-    console.log(array[index])
+for (let i = 0; i < part; i++) {
+    let name = prompt('What is your name?')
+    participants.push(name)
 }
+
+for (let name of participants.sort())
+document.getElementById('order').innerHTML += '<li>'+name+'</li>'
