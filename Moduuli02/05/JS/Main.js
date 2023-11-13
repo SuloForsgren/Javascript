@@ -1,13 +1,16 @@
 'use strict'
 
 let numbers = []
-let number = 0
+let same_number = false
 do {
-        number = parseInt(prompt('Number here: '), 10)
+        let number = parseInt(prompt('Number here: '), 10)
+        if (numbers.includes(number)) {
+            same_number = true
+        }
+        else {
         numbers.push(number)
-} while(number != 0)
-
-numbers.pop(0)
+        }
+} while(same_number == false)
 
 for (let index of numbers.sort((a,b) => a-b).reverse()){
     console.log(index)
