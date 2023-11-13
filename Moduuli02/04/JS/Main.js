@@ -9,6 +9,6 @@ do {
 
 numbers.pop(0)
 
-for (let index of numbers.reverse()){
+for (let index of numbers.sort((a,b) => a-b).reverse()){
     console.log(index)
 }
