@@ -3,14 +3,15 @@
 
 
 function concat(array) {
-    
-    for (let word of array) {
-        string += word
-    }
-    return string
-}
-let string = []
-const array = ['Apple', 'Banana', 'Hello', 'World']
-concat(array)
 
-document.getElementById('text').innerHTML = string
+	let string = ""
+    	for (let word of array) {
+        	string += word
+    	}
+    	return string
+}
+
+const array = ['Apple', 'Banana', 'Hello', 'World']
+const result = concat(array)
+
+document.getElementById('text').innerHTML = result
