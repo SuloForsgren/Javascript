@@ -12,8 +12,8 @@ for (let word of array) {
     listElement.appendChild(listText)
     
     if (word == "second") {
-        listElement.classList.add("my-item")
+        listElement.classList.add("my-item");
     }
 
-    element.appendChild(listElement)
+    element.append(listElement)
 }
