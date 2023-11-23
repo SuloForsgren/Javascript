@@ -1,10 +1,10 @@
-'use strict'
+"use strict";
 
-const ul = document.getElementById('target')
+const target = document.getElementById("target");
+const html =
+`<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>`;
 
-const item1 = '<li>"first item"</li>'
-const item2 = '<li>"Second item"</li>'
-const item3 = '<li>"Third item"</li>'
-
-ul.innerHTML = item1 + item2 + item3
-ul.classList.add("my-list")
+target.innerHTML += html;
+document.getElementById("target").classList.add("my-list");
