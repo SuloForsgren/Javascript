@@ -13,3 +13,9 @@ const students = [
     id: '5423679',
   },
 ];
+
+const element = document.getElementById('target')
+
+for (let student of students) {
+  console.log(student)
+}

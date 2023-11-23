@@ -6,7 +6,7 @@ const array = ["First", "Second", "Third"]
 
 
 for (let word of array) {
-    const listElement = document.createElement('li')
+    let listElement = document.createElement('li')
     
     const listText = document.createTextNode(word + " item")
     listElement.appendChild(listText)
