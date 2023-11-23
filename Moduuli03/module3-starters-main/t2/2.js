@@ -2,7 +2,7 @@
 
 const element = document.getElementById('target')
 
-const array = ["first", "second", "third"]
+const array = ["First", "Second", "Third"]
 
 
 for (let word of array) {
