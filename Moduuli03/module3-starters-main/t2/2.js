@@ -12,7 +12,7 @@ for (let word of array) {
     listElement.appendChild(listText)
     
     if (word == "second") {
-        document.querySelector('#target').classList.add("my-item")
+        listElement.classList.add("my-item")
     }
 
     element.appendChild(listElement)
