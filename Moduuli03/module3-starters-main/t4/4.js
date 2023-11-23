@@ -17,5 +17,11 @@ const students = [
 const element = document.getElementById('target')
 
 for (let student of students) {
-  console.log(student)
+  let option = document.createElement("option")
+  let text = document.createTextNode(student.name)
+
+  option.appendChild(text)
+  option.value = student.id
+
+  element.append(option)
 }

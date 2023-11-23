@@ -10,5 +10,5 @@ for (let word of names) {
     const listText = document.createTextNode(word)
     listElement.appendChild(listText)
 
-    element.appendChild(listElement)
+    element.innerHTML= listElement
 }
