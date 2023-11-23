@@ -11,5 +11,9 @@ for (let word of array) {
     const listText = document.createTextNode(word + " item")
     listElement.appendChild(listText)
     
+    if (word == "second") {
+        listElement.classList.add("my-item")
+    }
+
     element.appendChild(listElement)
 }
