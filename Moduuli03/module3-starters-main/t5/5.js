@@ -103,6 +103,7 @@ for (let art of picArray) {
   let figure = article.appendChild(document.createElement("figure"))
   let image = figure.appendChild(document.createElement("img"))
   image.src = art.image.medium
+  image.alt = art.art.title
 
   let figcaption = figure.appendChild(document.createElement("figcaption"))
   figcaption.append(art.caption)
