@@ -1,14 +1,13 @@
-'use strict';
-const element = document.getElementById('target')
+'use strict'
 
+const element = document.getElementById('target')
 const names = ['John', 'Paul', 'Jones'];
 
 
 for (let word of names) {
     const listElement = document.createElement('li')
-    
     const listText = document.createTextNode(word)
-    listElement.appendChild(listText)
+    listElement.append(listText)
 
-    element.innerHTML= listElement
+    element.appendChild(listElement)
 }
