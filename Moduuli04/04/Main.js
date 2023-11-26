@@ -15,13 +15,12 @@ form.addEventListener('submit', async function(evt) {
         console.log(data[0])
         
         for (let show of data) {
-            const name = show.show.name
+	    const name = show.show.name
             const url = show.show.url
-            const medium = show.show.image?.medium
-            const summary = show.show.summary
-            
+	    const summary = show.show.summary 
+	    const medium = show.show.image   
+	    
 
-            
             const article = div.appendChild(document.createElement("article"))
 
             const h2 = article.appendChild(document.createElement("h2"))
@@ -33,9 +32,15 @@ form.addEventListener('submit', async function(evt) {
             a.target = "_blank"
 
             const img = article.appendChild(document.createElement("img"))
-            img.src = medium
-            img.alt = name
-        
+            if (show.show.image !== null) {	
+	        img.src = show.show.image.medium
+            }
+	    else {
+		img.src = "https://via.placeholder.com/210x295?text=Not%20Found"
+       	    }
+
+	    img.alt = name
+ 
             const sum = article.appendChild(document.createElement("div"))
             sum.innerHTML = summary
         }
